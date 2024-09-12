@@ -7,6 +7,9 @@ import requests.exceptions
 from bs4 import BeautifulSoup
 
 user_url = str(input('[+] Entrez L\'URL Cible à Scanner: '))
+iteration = input('[+] Entrez le nombre de page que vous souhaitez scanner (par défaut: 100): ')
+while not iteration.isdigit():
+    iteration = input('[+] Entrez le nombre de page que vous souhaitez scanner (par défaut: 100): ')
 urls = deque([user_url])
 
 urls_scraped = set()
@@ -16,7 +19,7 @@ compteur = 0
 try:
     while len(urls):
         compteur += 1
-        if compteur == 100:
+        if compteur == int(iteration) + 1:
             break
         url = urls.popleft()
         urls_scraped.add(url)
