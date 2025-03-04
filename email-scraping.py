@@ -1,3 +1,4 @@
+import os
 import re
 import urllib.parse
 from collections import deque
@@ -6,10 +7,11 @@ import requests
 import requests.exceptions
 from bs4 import BeautifulSoup
 
-user_url = str(input('[+] Entrez L\'URL Cible à Scanner: '))
+current_path = os.path.dirname(os.path.realpath(__file__))
+user_url = str(input('[+] Entrez L\'URL Cible à Scanner (veillez à terminer par /): '))
 iteration = input('[+] Entrez le nombre de page que vous souhaitez scanner (par défaut: 100): ')
 while not iteration.isdigit():
-    iteration = input('[+] Entrez le nombre de page que vous souhaitez scanner (par défaut: 100): ')
+    iteration = input('[x] Le nombre de page doit être un nombre entier, entrez le nombre de page que vous souhaitez scanner (par défaut: 100): ')
 urls = deque([user_url])
 
 urls_scraped = set()
@@ -19,7 +21,7 @@ compteur = 0
 try:
     while len(urls):
         compteur += 1
-        if compteur == int(iteration) + 1:
+        if compteur == int(iteration):
             break
         url = urls.popleft()
         urls_scraped.add(url)
@@ -51,5 +53,8 @@ try:
 except KeyboardInterrupt:
     print('[-] Fermeture!')
 
-for mail in emails:
-    print(mail)
+with open(current_path + "/emails.dat", "a", encoding="utf-8") as f:
+    f.write("\n\n" + user_url + "\n")
+    for mail in emails:
+        f.write(mail + "\n")
+        f.write(mail + "\n")
