@@ -1,0 +1,29 @@
+{
+    "_default": {
+        "1": {
+            "name": "John Doe",
+            "score": 40,
+            "role": "user"
+        },
+        "2": {
+            "name": "Jane Doe",
+            "score": 42,
+            "role": "user"
+        },
+        "3": {
+            "name": "Bob Marley",
+            "score": 43,
+            "role": "user"
+        },
+        "4": {
+            "name": "Curt Cobayn",
+            "score": 44,
+            "role": "user"
+        },
+        "5": {
+            "name": "Jimmy Hendrix",
+            "score": 45,
+            "role": "user"
+        }
+    }
+}

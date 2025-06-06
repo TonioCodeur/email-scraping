@@ -3,8 +3,8 @@ from pathlib import Path
 
 home_path = Path.home()
 print(home_path)
-current_path = Path(__file__).resolve()
-current_path = current_path.parent
+path = Path(__file__).resolve()
+current_path = path.parent # ou Path.cwd()
 print(current_path)
 # file_path = current_path / "pathlid"
 # file_path = current_path.joinpath("pathLib")
