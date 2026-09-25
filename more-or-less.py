@@ -1,5 +1,7 @@
 import random
 
+# ajout d'une seed
+random.seed(42)
 runing = True
 while runing:
   max_number = input("vous voulez deviner un nom aléatoire entre 0 et : ")

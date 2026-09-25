@@ -1,0 +1,6 @@
+Ceci est un fichier de test pour l'application de chiffrement.
+Il contient plusieurs lignes de texte.
+Nous allons tester le chiffrement et le déchiffrement.
+🔐 Test des caractères spéciaux et émojis ! 🔓
+Fin du fichier de test.
+
