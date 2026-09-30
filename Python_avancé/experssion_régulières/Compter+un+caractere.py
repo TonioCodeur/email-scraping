@@ -1,0 +1,7 @@
+# ? 		0 ou 1 fois
+# *	    	0 à l'infini
+# +	    	de 1 à l'infini
+# {3} 		exactement 3
+# {3,}  	de 3 à l'infini
+# {,3}  	de 0 à 3 fois
+# {3,6} 	de 3 à 6 fois
